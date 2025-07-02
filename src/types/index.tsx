@@ -17,7 +17,6 @@ export interface PredefinedServicePart {
     id: string;
     name: string;
     price: number;
-    amount: number;
   }
   
 export interface PredefinedService {
