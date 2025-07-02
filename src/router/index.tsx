@@ -8,6 +8,8 @@ import { PageLayout } from '../pages/page-layout/index.tsx'
 import { HomePage } from '../pages/home-page/index.tsx'
 import { AddVisitPage } from '../pages/add-visit-page/index.tsx'
 import { NotFoundPage } from '../pages/not-found-page/index.tsx'
+import { SearchPage } from '../pages/search-visit/index.tsx'
+import { ServicesPage } from '../pages/services-page/index.tsx'
 
 
 // Routing 
@@ -25,11 +27,19 @@ const router = createBrowserRouter([
         path: 'add-visit',
         element: <AddVisitPage />,
       },
-    
+      {
+        path: 'search-visit',
+        element: <SearchPage />,
+      },
+      {
+        path: 'services',
+        element: <ServicesPage />,
+      },
     ]
   }
 ]);
 
+// Display 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <RouterProvider router={router} />
