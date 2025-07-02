@@ -3,7 +3,7 @@ export function ComponentExample ()
 
   return (
 
-    <p>This example of component</p>; 
+    <p>This example of component</p>
 
 
   )
