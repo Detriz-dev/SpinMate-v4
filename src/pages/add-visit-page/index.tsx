@@ -1,8 +1,12 @@
+import { Header } from "../../componets/header";
+
 export function AddVisitPage ()
 {
 return (
-
-    <p>Add Visit Page</p>
+    <> 
+        <Header />
+        <p>Add Visit Page</p> 
+    </>
 
 )
 

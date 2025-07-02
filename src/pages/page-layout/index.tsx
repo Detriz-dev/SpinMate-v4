@@ -1,10 +1,11 @@
 import { Outlet } from 'react-router-dom';
+import { Navigation } from '../../componets/navigation';
 
 
 export function PageLayout() {
   return (
     <>
-      <h1>test</h1>
+      <Navigation/>
       <main>
         <Outlet />
       </main>
