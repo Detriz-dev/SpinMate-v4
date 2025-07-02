@@ -1,9 +1,13 @@
-export function PageLayout ()
-{
+import { Outlet } from 'react-router-dom';
 
-return (
- <h1> Page layout </h1>
 
-)
-
+export function PageLayout() {
+  return (
+    <>
+      <h1>test</h1>
+      <main>
+        <Outlet />
+      </main>
+    </>
+  );
 }
