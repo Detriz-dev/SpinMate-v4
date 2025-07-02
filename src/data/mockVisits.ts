@@ -1,6 +1,6 @@
 // src/data/mockVisits.ts
 
-import { Visit, ServiceSubject, PredefinedService, PredefinedServicePart, CustomerInfo, Mechanic, Label } from './data/mockVisits.ts';
+import type { Visit, CustomerInfo, Mechanic, ServiceSubject, PredefinedService, PredefinedServicePart, Label } from "../types";
 
 // Mock data for customers
 export const mockCustomers: CustomerInfo[] = [
