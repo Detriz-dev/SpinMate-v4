@@ -8,7 +8,8 @@ import {
   Home as HomeIcon,
   Add as AddIcon,
   Search as SearchIcon,
-  Build as BuildIcon
+  Build as BuildIcon,
+  Settings as SettingsIcon
 } from '@mui/icons-material';
 import { useLocation, useNavigate } from 'react-router-dom';
 
@@ -21,7 +22,8 @@ export function Navigation() {
     { path: '/', label: 'Home', icon: <HomeIcon /> },
     { path: '/add-visit', label: 'Add Visit', icon: <AddIcon /> },
     { path: '/search-visit', label: 'Search', icon: <SearchIcon /> },
-    { path: '/services', label: 'Services', icon: <BuildIcon /> }
+    { path: '/services', label: 'Services', icon: <BuildIcon /> },
+    { path: '/manage', label: 'Manage', icon: <SettingsIcon /> }
   ];
 
   // Update selected value when location changes

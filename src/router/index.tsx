@@ -15,6 +15,8 @@ import { AddVisitPage } from '../pages/add-visit-page/index.tsx'
 import { NotFoundPage } from '../pages/not-found-page/index.tsx'
 import { SearchPage } from '../pages/search-visit/index.tsx'
 import { ServicesPage } from '../pages/services-page/index.tsx'
+import { ManagePage } from '../pages/manage-page/index.tsx'
+
 
 // Routing 
 const router = createBrowserRouter([
