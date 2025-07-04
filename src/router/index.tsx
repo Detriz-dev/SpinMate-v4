@@ -39,6 +39,10 @@ const router = createBrowserRouter([
         path: 'services',
         element: <ServicesPage />,
       },
+      {
+        path: 'manage',
+        element: <ManagePage />,
+      },
     ]
   }
 ]);
