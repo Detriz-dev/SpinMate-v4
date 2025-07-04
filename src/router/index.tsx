@@ -2,6 +2,11 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { ThemeProvider } from '@mui/material/styles'
+import CssBaseline from '@mui/material/CssBaseline'
+
+// Theme
+import { theme } from '../theme'
 
 // Pages and components 
 import { PageLayout } from '../pages/page-layout/index.tsx'
@@ -11,16 +16,15 @@ import { NotFoundPage } from '../pages/not-found-page/index.tsx'
 import { SearchPage } from '../pages/search-visit/index.tsx'
 import { ServicesPage } from '../pages/services-page/index.tsx'
 
-
 // Routing 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <PageLayout />, // Use Layout as the root element
+    element: <PageLayout />,
     errorElement: <NotFoundPage />,
-    children: [ // All pages become children of the layout
+    children: [
       {
-        index: true, // This makes it the default route for "/"
+        index: true,
         element: <HomePage />,
       },
       {
@@ -42,6 +46,9 @@ const router = createBrowserRouter([
 // Display 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </StrictMode>,
 )

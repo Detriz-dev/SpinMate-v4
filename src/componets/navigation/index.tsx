@@ -1,14 +1,66 @@
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { 
+  BottomNavigation, 
+  BottomNavigationAction,
+  Paper
+} from '@mui/material';
+import { 
+  Home as HomeIcon,
+  Add as AddIcon,
+  Search as SearchIcon,
+  Build as BuildIcon
+} from '@mui/icons-material';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export function Navigation() {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const [value, setValue] = useState(0);
+
+  const navigationItems = [
+    { path: '/', label: 'Home', icon: <HomeIcon /> },
+    { path: '/add-visit', label: 'Add Visit', icon: <AddIcon /> },
+    { path: '/search-visit', label: 'Search', icon: <SearchIcon /> },
+    { path: '/services', label: 'Services', icon: <BuildIcon /> }
+  ];
+
+  // Update selected value when location changes
+  useEffect(() => {
+    const currentIndex = navigationItems.findIndex(item => item.path === location.pathname);
+    if (currentIndex !== -1) {
+      setValue(currentIndex);
+    }
+  }, [location.pathname]);
+
+  const handleChange = (_event: React.SyntheticEvent, newValue: number) => {
+    setValue(newValue);
+    navigate(navigationItems[newValue].path);
+  };
+
   return (
-    <nav>
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/add-visit">Add Visit</Link></li>
-        <li><Link to="/search-visit">Search</Link></li>
-        <li><Link to="/services">Services</Link></li>
-      </ul>
-    </nav>
+    <Paper 
+      sx={{ 
+        position: 'fixed', 
+        bottom: 0, 
+        left: 0, 
+        right: 0,
+        zIndex: 1000
+      }} 
+      elevation={3}
+    >
+      <BottomNavigation
+        value={value}
+        onChange={handleChange}
+        showLabels
+      >
+        {navigationItems.map((item, index) => (
+          <BottomNavigationAction
+            key={index}
+            label={item.label}
+            icon={item.icon}
+          />
+        ))}
+      </BottomNavigation>
+    </Paper>
   );
 }
