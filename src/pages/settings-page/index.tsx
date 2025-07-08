@@ -1,11 +1,11 @@
 import { Header } from "../../componets/header";
 
-export function ManagePage ()
+export function SettingsPage ()
 {
 return (
     <> 
         <Header />
-        <p>Manage</p> 
+        <p>SettingsPage Page</p> 
     </>
 
 )

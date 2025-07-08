@@ -20,10 +20,9 @@ export function Navigation() {
 
   const navigationItems = [
     { path: '/', label: 'Home', icon: <HomeIcon /> },
-    { path: '/add-visit', label: 'Add Visit', icon: <AddIcon /> },
     { path: '/search-visit', label: 'Search', icon: <SearchIcon /> },
-    { path: '/services', label: 'Services', icon: <BuildIcon /> },
-    { path: '/manage', label: 'Manage', icon: <SettingsIcon /> }
+    { path: '/settings', label: 'Settings', icon: <SettingsIcon /> },
+    { path: '/add-visit', label: 'Add Visit', icon: <AddIcon /> },
   ];
 
   // Update selected value when location changes
