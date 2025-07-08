@@ -1,5 +1,6 @@
 // Configuration
 import { StrictMode } from 'react'
+export { router };
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
