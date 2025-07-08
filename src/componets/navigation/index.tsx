@@ -12,7 +12,7 @@ import {
 } from '@mui/icons-material';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-export function Navigation() {
+export function Navigation () {
   const location = useLocation();
   const navigate = useNavigate();
   const [value, setValue] = useState(0);
@@ -64,3 +64,4 @@ export function Navigation() {
     </Paper>
   );
 }
+ 
