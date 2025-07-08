@@ -1,8 +1,10 @@
 // Configuration
 import { StrictMode } from 'react'
-export { router };
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { ThemeProvider } from '@mui/material/styles'
+import { CssBaseline } from '@mui/material'
+import { theme } from '../theme'
 
 // Pages and components 
 import { PageLayout } from '../pages/page-layout/index.tsx'
@@ -15,7 +17,6 @@ import { SettingsPage } from '../pages/settings-page/index.tsx'
 import { MechanicsPage } from '../pages/mechanics-page/index.tsx'
 import { LabelsPage } from '../pages/labels-page/index.tsx'
 import { ServiceParts } from '../pages/services-parts/index.tsx'
-
 
 // Routing 
 const router = createBrowserRouter([
@@ -53,10 +54,6 @@ const router = createBrowserRouter([
         element: <LabelsPage />,
       },
       {
-        path: 'settings',
-        element: <SettingsPage />,
-      },
-      {
         path: 'service-parts',
         element: <ServiceParts />,
       },
@@ -67,6 +64,11 @@ const router = createBrowserRouter([
 // Display 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </StrictMode>,
 )
+
+export { router };
