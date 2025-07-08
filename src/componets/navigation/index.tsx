@@ -8,7 +8,6 @@ import {
   Home as HomeIcon,
   Add as AddIcon,
   Search as SearchIcon,
-  Build as BuildIcon,
   Settings as SettingsIcon
 } from '@mui/icons-material';
 import { useLocation, useNavigate } from 'react-router-dom';

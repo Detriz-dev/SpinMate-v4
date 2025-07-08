@@ -10,7 +10,8 @@ export function Header() {
       '/': 'Home',
       '/add-visit': 'Add Visit',
       '/search-visit': 'Search Visits',
-      '/services': 'Services'
+      '/services': 'Services',
+      '/settings': 'Settings'
     };
     return routes[pathname] || 'Unknown Page';
   };
