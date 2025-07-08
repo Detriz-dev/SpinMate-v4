@@ -14,8 +14,8 @@ export function Header() {
       '/settings': 'Settings',
       '/labels': 'Labels',
       '/mechanics': 'Mechanics',
-      '/service-parts': 'Service Parts',
-
+      '/service-parts': 'service parts',
+      
       
       
     };
